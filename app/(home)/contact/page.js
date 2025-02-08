@@ -65,14 +65,14 @@ export default function Contact() {
                     <label className="block theme-color mb-2">First Name</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary dark:bg-gray-700"
+                      className="input"
                     />
                   </div>
                   <div>
                     <label className="block theme-color mb-2">Last Name</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary dark:bg-gray-700"
+                      className="input"
                     />
                   </div>
                 </div>
@@ -81,7 +81,7 @@ export default function Contact() {
                   <label className="block theme-color mb-2">Email</label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary dark:bg-gray-700"
+                    className="input"
                   />
                 </div>
 
@@ -89,7 +89,7 @@ export default function Contact() {
                   <label className="block theme-color mb-2">Message</label>
                   <textarea
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary dark:bg-gray-700"
+                    className="input"
                   ></textarea>
                 </div>
 

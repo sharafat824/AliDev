@@ -31,6 +31,13 @@ export default function Dashboard() {
                     <CustomPieChart />
                 </div>
             </div>
+            <div className="mt-8 flex justify-center">
+                <Link href="/user/chat">
+                    <button className="btn-primary">
+                        Chat with Admin
+                    </button>
+                </Link>
+            </div>
         </div>
     );
 }

@@ -14,7 +14,7 @@ const Chat = ({ roomId, receiverId }) => {
   const { user } = useUser();
 
   useEffect(() => {
-    socketRef.current = io("http://localhost:3000", { path: "/api/socket" });
+    socketRef.current = io("https://ali-dev-bay.vercel.app", { path: "/api/socket" });
 
     socketRef.current.emit("join_room", roomId);
 

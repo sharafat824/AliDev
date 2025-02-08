@@ -25,7 +25,7 @@ function initializeSocket(server) {
         try {
           console.log("📩 Message Data to Send:", data); // Log the data
       
-          const response = await fetch("http://localhost:3000/api/saveMessage", {
+          const response = await fetch("https://ali-dev-bay.vercel.app/api/saveMessage", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

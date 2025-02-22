@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
-import { Button, buttonVariants } from "@/components/ui/button";
-
+import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
 import {
     Sheet,
     SheetContent,
@@ -23,13 +23,15 @@ import Image from "next/image";
 
 
 const Navbar = () => {
+    const { resolvedTheme } = useTheme();
     const { isSignedIn, user, isLoaded } = useUser();
+    const logoSrc = resolvedTheme === "dark" ? "/images/dark-logo.png" : "/images/logo-light.png";
     return (
         <nav fallback={<Loading />} className="top-0 border-b bg-background/50 backdrop-blur sticky z-50">
             <div className="mx-10 px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <Link href="/" className="flex items-center">
-                      <Image src="/images/dark-logo.png" alt="logo" width={180} height={180}/>
+                    <Image src={logoSrc} alt="Logo" width={180} height={180} priority />    
                     </Link>
                     <div className="hidden md:flex items-center space-x-6">
                         {/* Links with a hover effect using font-bold */}

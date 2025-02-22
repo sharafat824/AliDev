@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link";
 import { Button, buttonVariants } from "@/components/ui/button";
+
 import {
     Sheet,
     SheetContent,
@@ -18,6 +19,7 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Image from "next/image";
 
 
 const Navbar = () => {
@@ -27,7 +29,7 @@ const Navbar = () => {
             <div className="mx-10 px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <Link href="/" className="flex items-center">
-                        <span className="font-extrabold text-2xl text-primary">AliBlog</span>
+                      <Image src="/images/dark-logo.png" alt="logo" width={180} height={180}/>
                     </Link>
                     <div className="hidden md:flex items-center space-x-6">
                         {/* Links with a hover effect using font-bold */}

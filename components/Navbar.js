@@ -25,13 +25,14 @@ import Image from "next/image";
 const Navbar = () => {
     const { resolvedTheme } = useTheme();
     const { isSignedIn, user, isLoaded } = useUser();
-    const logoSrc = resolvedTheme === "dark" ? "/images/dark-logo.png" : "/images/logo-light.png";
+    const logoSrc = resolvedTheme === "dark" ? "/images/dark-logo.png" : "/images/logo.png";
+    const logoHeightWidth = resolvedTheme === "dark" ? 180 : 200;
     return (
         <nav fallback={<Loading />} className="top-0 border-b bg-background/50 backdrop-blur sticky z-50">
             <div className="mx-10 px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <Link href="/" className="flex items-center">
-                    <Image src={logoSrc} alt="Logo" width={180} height={180} priority />    
+                    <Image src={logoSrc} alt="Logo" width={logoHeightWidth} height={logoHeightWidth} priority />    
                     </Link>
                     <div className="hidden md:flex items-center space-x-6">
                         {/* Links with a hover effect using font-bold */}

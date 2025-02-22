@@ -6,7 +6,6 @@ import Link from "next/link";
 
 export default function Hero() {
   useEffect(() => {
-    // Initialize Typed.js on the element
     const options = {
       strings: ["Software Developer", "Web Developer", "Full-Stack Developer"],
       typeSpeed: 100,
@@ -18,20 +17,18 @@ export default function Hero() {
 
     const typed = new Typed("#typed", options);
 
-    // Clean up the Typed.js instance when the component is unmounted
     return () => {
       typed.destroy();
     };
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center py-20 lg:py-0">
+    <section className="flex items-center justify-center py-10 lg:py-20">
       <div className="container mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between">
         {/* Left Section */}
         <div className="w-full lg:w-1/2 text-center lg:text-left space-y-8">
-          <h1 className="text-4xl lg:text-5xl font-bold theme-color leading-tight">
-            Hi, I'm <span className="text-primary">Sharafat Ali</span>, a{" "}
-            {/* Typewriter effect text */}
+          <h1 className="text-3xl lg:text-4xl font-bold theme-color leading-[1.2]">
+            Hi, I'm <span className="text-primary">Sharafat Ali</span>, <br />
             <span id="typed" className="text-primary font-bold"></span>
           </h1>
           <p className="mt-4 text-lg theme-color">

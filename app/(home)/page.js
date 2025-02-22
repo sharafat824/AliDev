@@ -8,7 +8,7 @@ export default function Home() {
       {/* Hero Section */}
       <Hero/>
       {/* Projects Section */}
-      <section id="projects" className="py-20">
+      <section id="projects" className="py-10 lg:py-20">
         <div className="container mx-auto px-6 lg:px-16">
           <h2 className="text-4xl font-bold theme-color text-center">
             My Projects
@@ -34,7 +34,7 @@ export default function Home() {
                 A full-stack e-commerce platform built with React and Node.js.
               </p>
               <a
-                href="#"
+                href="https://securegrades.com" target="_blank"
                 className="mt-4 inline-block px-4 py-2 text-white bg-primary rounded-lg hover:bg-primary/80"
               >
                 View Project
@@ -57,7 +57,7 @@ export default function Home() {
                 A task management app built with Vue.js and Firebase.
               </p>
               <a
-                href="#"
+                href="https://autowise.com" target="_blank"
                 className="mt-4 inline-block px-4 py-2 text-white bg-primary rounded-lg hover:bg-primary/80"
               >
                 View Project
@@ -79,19 +79,19 @@ export default function Home() {
               <p className="mt-2 theme-color">
                 A responsive portfolio website built with Next.js and Tailwind CSS.
               </p>
-              <a
-                href="#"
+              {/* <a
+                href=""
                 className="mt-4 inline-block px-4 py-2 text-white bg-primary rounded-lg hover:bg-primary/80"
               >
                 View Project
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20  ">
+      <section id="skills" className="py-10 lg:py-20">
         <div className="container mx-auto px-6 lg:px-16">
           <h2 className="text-4xl font-bold theme-color text-center">
             My Skills
@@ -161,7 +161,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 0">
+      <section id="testimonials" className="py-10 lg:py-20">
         <div className="container mx-auto px-6 lg:px-16">
           <h2 className="text-4xl font-bold theme-color text-center">
             Testimonials
@@ -241,7 +241,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20  ">
+      <section id="contact" className="py-10 lg:py-20">
         <div className="container mx-auto px-6 lg:px-16">
           <h2 className="text-4xl font-bold theme-color text-center">
             Get In Touch

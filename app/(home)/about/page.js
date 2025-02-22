@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="container mx-auto pt-20">
+    <div className="container mx-auto py-10 lg:py-20">
       {/* Hero Section */}
-      <section className="min-h-screfen flex items-center justify-center py-20 lg:py-0">
+      <section className="flex justify-center lg:py-0">
         <div className="container mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between">
           {/* Left Section */}
           <div className="w-full lg:w-1/2 text-center lg:text-left space-y-8">

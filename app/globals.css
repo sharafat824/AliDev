@@ -147,7 +147,7 @@ body {
 
   /* Reusable section styles */
   .section {
-    @apply py-20;
+    @apply py-10 lg:py-20;
   }
 
   .section-title {

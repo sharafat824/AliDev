@@ -25,7 +25,7 @@ import Image from "next/image";
 const Navbar = () => {
     const { resolvedTheme } = useTheme();
     const { isSignedIn, user, isLoaded } = useUser();
-    const logoSrc = resolvedTheme === "dark" ? "/images/dark-logo.png" : "/images/logo.png";
+    const logoSrc = resolvedTheme === "dark" ? "/images/dark-logo.png" : "/images/logo-0-bg.png";
     const logoHeightWidth = resolvedTheme === "dark" ? 180 : 200;
     return (
         <nav fallback={<Loading />} className="top-0 border-b bg-background/50 backdrop-blur sticky z-50">

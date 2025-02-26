@@ -1,12 +1,15 @@
-import { Fira_Code } from "next/font/google";
+import { Fira_Code as FiraCode } from "next/font/google";
+
+
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import Provider from "./provider";
 
 // Import the Fira Code font
-const firaCodeFont = Fira_Code({
-  subsets: ['latin'], // Specify the subsets you need
+const firaCodeFont = FiraCode({
+  subsets: ["latin"],
+  variable: "--font-fira-code", // Optional for using CSS variables
 });
 
 // Metadata for the page

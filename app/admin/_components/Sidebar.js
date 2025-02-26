@@ -2,7 +2,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaTachometerAlt, FaCogs, FaChartLine, FaUsers, FaFileAlt } from "react-icons/fa";
+import { FaTachometerAlt, FaCogs, FaChartLine, FaUsers, FaFileAlt,FaBlog} from "react-icons/fa";
 
 export default function Sidebar({ isOpen, onClose }) {
     const pathName = usePathname();
@@ -30,6 +30,7 @@ export default function Sidebar({ isOpen, onClose }) {
                     <ul className="space-y-2">
                         {[{ icon: <FaTachometerAlt />, text: "Dashboard", href: "/admin/dashboard" },
                         { icon: <FaUsers />, text: "Users", href: "/admin/users" },
+                        { icon: <FaBlog />, text: "Blogs", href: "/admin/blogs" },
                         { icon: <FaChartLine />, text: "Analytics", href: "/admin/analytics" },
                         { icon: <FaFileAlt />, text: "Reports", href: "/admin/reports" },
                         { icon: <FaCogs />, text: "Settings", href: "/admin/settings" }]

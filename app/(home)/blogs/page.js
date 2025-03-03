@@ -19,10 +19,10 @@
             <div className="container mx-auto px-6 lg:px-16">
                 <div className="theme-bg rounded-2xl shadow-lg overflow-hidden hover:scale-[1.02] transition-transform duration-300">
                 <Image
-                    src="/images/blog/featured-post.jpg"
+                    src="/images/blogs/nextjs-feature.webp"
                     alt="Featured Post"
                     width={1200}
-                    height={630}
+                    height={800}
                     className="w-full h-64 object-cover"
                 />
                 <div className="p-8">
@@ -65,7 +65,7 @@
                 {/* Blog Post 1 */}
                 <article className="card ">
                     <Image
-                    src="/images/blog/post-1.jpg"
+                    src="/images/blogs/react.webp"
                     alt="State Management"
                     width={600}
                     height={400}
@@ -94,7 +94,7 @@
                 {/* Blog Post 2 */}
                 <article className="card ">
                     <Image
-                    src="/images/blog/post-2.jpg"
+                    src="/images/blogs/rest-api.webp"
                     alt="API Security"
                     width={600}
                     height={400}
@@ -123,7 +123,7 @@
                 {/* Blog Post 3 */}
                 <article className="card ">
                     <Image
-                    src="/images/blog/post-3.jpg"
+                    src="/images/blogs/ui.webp"
                     alt="Web Components"
                     width={600}
                     height={400}

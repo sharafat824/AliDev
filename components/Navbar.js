@@ -20,6 +20,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 
 const Navbar = () => {
@@ -27,40 +28,40 @@ const Navbar = () => {
     const { isSignedIn, user, isLoaded } = useUser();
     const logoSrc = resolvedTheme === "dark" ? "/images/dark-logo.png" : "/images/logo-0-bg.png";
     const logoHeightWidth = resolvedTheme === "dark" ? 180 : 200;
+    const pathname = usePathname();
     return (
         <nav fallback={<Loading />} className="top-0 border-b bg-background/50 backdrop-blur sticky z-50">
-            <div className="mx-10 px-4 sm:px-6 lg:px-8">
+            <div className="lg:mx-10 sm:mx-8 px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <Link href="/" className="flex items-center">
-                    <Image src={logoSrc} alt="Logo" width={logoHeightWidth} height={logoHeightWidth} priority />    
+                        <Image src={logoSrc} alt="Logo" width={logoHeightWidth} height={logoHeightWidth} priority />
                     </Link>
                     <div className="hidden md:flex items-center space-x-6">
                         {/* Links with a hover effect using font-bold */}
                         <Link
                             href="/"
-                            className="hover:scale-105 transition-transform duration-300 hover:text-primary"
+                            className={`hover:scale-105 transition-transform duration-300 ${pathname === "/" ? "text-primary font-bold" : "hover:text-primary"}`}
                         >
                             Home
                         </Link>
                         <Link
                             href="/about"
-                            className="hover:scale-105 transition-transform duration-300 hover:text-primary"
+                            className={`hover:scale-105 transition-transform duration-300 ${pathname === "/about" ? "text-primary font-bold" : "hover:text-primary"}`}
                         >
                             About
                         </Link>
                         <Link
                             href="/blogs"
-                            className="hover:scale-105 transition-transform duration-300 hover:text-primary"
+                            className={`hover:scale-105 transition-transform duration-300 ${pathname === "/blogs" ? "text-primary font-bold" : "hover:text-primary"}`}
                         >
                             Blogs
                         </Link>
                         <Link
                             href="/contact"
-                            className="hover:scale-105 transition-transform duration-300 hover:text-primary"
+                            className={`hover:scale-105 transition-transform duration-300 ${pathname === "/contact" ? "text-primary font-bold" : "hover:text-primary"}`}
                         >
                             Contact
                         </Link>
-
                         {/* Buttons */}
                         <div className="flex items-center space-x-4">
                             {isSignedIn && isLoaded ? (
@@ -131,28 +132,29 @@ const Navbar = () => {
                                 <div className="mt-6 flex flex-col space-y-6 px-4">
                                     <Link
                                         href="/"
-                                        className="text-lg font-medium hover:underline hover:font-bold transition"
+                                        className={`text-lg font-medium transition ${pathname === "/" ? "text-primary font-bold" : "hover:underline hover:font-bold"}`}
                                     >
                                         Home
                                     </Link>
                                     <Link
                                         href="/about"
-                                        className="text-lg font-medium hover:underline hover:font-bold transition"
+                                        className={`text-lg font-medium transition ${pathname === "/about" ? "text-primary font-bold" : "hover:underline hover:font-bold"}`}
                                     >
                                         About
                                     </Link>
                                     <Link
                                         href="/blogs"
-                                        className="text-lg font-medium hover:underline hover:font-bold transition"
+                                        className={`text-lg font-medium transition ${pathname === "/blogs" ? "text-primary font-bold" : "hover:underline hover:font-bold"}`}
                                     >
                                         Blogs
                                     </Link>
                                     <Link
                                         href="/contact"
-                                        className="text-lg font-medium hover:underline hover:font-bold transition"
+                                        className={`text-lg font-medium transition ${pathname === "/contact" ? "text-primary font-bold" : "hover:underline hover:font-bold"}`}
                                     >
                                         Contact
                                     </Link>
+
                                     <div className="border-t border-gray-300 my-4"></div>
                                     {isSignedIn ? (
                                         <div className="flex items-center space-x-4">
